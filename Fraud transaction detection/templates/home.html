@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fraud Detection</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<img src="https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg" style="position: fixed;width: 100%;z-index: -99">
+<div class="container">
+	<h2 class="text-center text-info">Fraud Detection</h2>
+	<hr>
+	<form method="post" class="row" action="{{ url_for('Predict') }}">
+		<div class="form-group col-md-6">
+			<label>Credit card number</label>
+			<input type="text" name="cred" class="form-control" placeholder="Enter Credit card number">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Merchant</label>
+			<input type="text" name="merchant" class="form-control" placeholder="Enter Merchant">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Amount</label>
+			<input type="text" name="amount" class="form-control" placeholder="Enter Amount">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Zip code</label>
+			<input type="text" name="pincode" class="form-control" placeholder="Enter pincode">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Latitude</label>
+			<input type="text" name="lat" class="form-control" placeholder="Enter Latitude">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Longitude</label>
+			<input type="text" name="longe" class="form-control" placeholder="Enter Longtude">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Date of birth</label>
+			<input type="date" name="dob" class="form-control">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Transaction number</label>
+			<input type="text" name="trans" class="form-control" placeholder="Enter Number">
+		</div>
+		<div class="form-group col-md-6">
+			<label>City population</label>
+			<input type="text" name="city" class="form-control" placeholder="Enter City population">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Job</label>
+			<input type="text" name="job" class="form-control" placeholder="Enter Job Name">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Merchant Latitude</label>
+			<input type="text" name="mer_lat" class="form-control" placeholder="Enter Merchant Latitude">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Merchant Longitude</label>
+			<input type="text" name="mer_long" class="form-control" placeholder="Enter Merchant Longtitude">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Date of Transaction</label>
+			<input type="date" name="dot" class="form-control">
+		</div>
+		<div class="form-group col-md-6">
+			<label>Gender</label>
+			<select class="form-control" name="gender">
+				<option value="">Select</option>
+				<option value="1">Male</option>
+				<option value="0">Female</option>
+			</select>
+		</div>
+		<div class="form-group col-md-6">
+			<label>Category</label>
+			<select class="form-control" name="category">
+				<option value="">Select</option>
+				<option value="0">Entertainment</option>
+				<option value="1">Food</option>
+				<option value="2">Gas transport</option>
+				<option value="3">Grocery Net</option>
+				<option value="4">Grocery pos</option>
+				<option value="5">Health fitness</option>
+				<option value="6">Home</option>
+				<option value="7">Kids pets</option>
+				<option value="8">Misc net</option>
+				<option value="9">Misc pos</option>
+				<option value="10">Personal care</option>
+				<option value="11">Shopping net</option>
+				<option value="12">Shopping pos</option>
+				<option value="13">Travel</option>
+			</select>
+		</div>
+
+		<div class="clearfix"></div>
+		<button class="btn btn-warning pull-right">Submit</button>
+
+	</form>
+</div>
+
+
+</body>
+</html>
